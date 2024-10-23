@@ -1,11 +1,10 @@
 
-FROM debian:bullseye-slim
+FROM ubuntu:noble
 
 # Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
 ENV VENV_PATH=/opt/venv
 
-RUN apt-get update && \
+RUN apt-get update -y && apt install -y \
     python3 \
     python3-venv \
     python3-pip \
